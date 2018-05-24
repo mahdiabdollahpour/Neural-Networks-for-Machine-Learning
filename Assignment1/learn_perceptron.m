@@ -111,6 +111,7 @@ for i=1:num_neg_examples
     x = this_case'; %Hint
     activation = this_case*w;
     if (activation >= 0)
+        w = w - this_case';
         %YOUR CODE HERE
     end
 end
@@ -119,6 +120,7 @@ for i=1:num_pos_examples
     x = this_case';
     activation = this_case*w;
     if (activation < 0)
+        w = w + this_case';
         %YOUR CODE HERE
     end
 end
